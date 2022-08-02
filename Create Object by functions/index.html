@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+        defer></script>
+</head>
+
+<body>
+    <h1 style="text-align: center;">My function for create a object</h1>
+    <div class=" container mb-3">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control name" id="exampleFormControlInput1" placeholder="Enter Your Name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">F/Name</label>
+            <input type="text" class="form-control fname" id="exampleFormControlInput1" placeholder="Enter Your F/Name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Location</label>
+            <input type="text" class="form-control loc" id="exampleFormControlInput1" placeholder="Location">
+        </div>
+    </div>
+    <div class="mx-auto my-2">
+        <button class="mx-auto d-block my-2 btn btn-primary">Make Obj(Save info)</button>
+    </div>
+    <script>
+        let btn = document.getElementsByClassName('btn')[0];
+        let nam = document.getElementsByClassName('name')[0];
+        let fnam = document.getElementsByClassName('fname')[0];
+        let loc = document.getElementsByClassName('loc')[0];
+        objm = function (name, fname, location) {
+            this.name = name
+            this.fname = fname
+            this.location = location
+        }
+        // console.log(btn,nam,fnam,loc);
+        btn.addEventListener('click', () => {
+            let name = nam.value
+            let fname = fnam.value
+            var location = loc.value
+            let obj1 = new objm(name, fname, location)
+            console.log(obj1);
+            nam.value = ""
+            fnam.value = ""
+            loc.value = ""
+        })
+    </script>
+</body>
+
+</html>
