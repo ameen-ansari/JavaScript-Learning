@@ -20,21 +20,18 @@ var fnameInput = document.getElementById('sinput')
 var para1 = document.getElementById('para1')
 var para2 = document.getElementById('para2')
 // console.log(nameInput,fnameInput,savebtn);
-makeobj = function (x, y) {
-  this.Name = x
-  this.Fname = y
-}
-var u = 1
+var data = [];
 save = () => {
-  if (nameInput.value.length > 0 && fnameInput.value.length > 0) {
-    var x = nameInput.value
-    var y = fnameInput.value
-    var obj = new makeobj(x, y)
-    console.log(obj)
-    para1.innerHTML += `${u++}:- UserName is <span><u>${obj.Name}</u></span></br>----UserF/Name is <span><u>${obj.Fname}</u></span></br></br>`
-    nameInput.value = ''
-    fnameInput.value = ''
-  } else {
-    para1.innerHTML += `Please Insert theName & Fname </br>`
+  console.log('add eventlistener');
+  var obj = {
+    name:nameInput.value,
+    fname:fnameInput.value
   }
+console.log(obj);
+data.push(obj)
+console.log(data);
+localStorage.setItem('datalist',JSON.stringify(data))
+nameInput.value = ''
+fnameInput.value = ''
+// use getitem meth0d solve later 
 }
