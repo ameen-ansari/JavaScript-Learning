@@ -2,7 +2,7 @@
 // (1)-->var obj1 = {
 //     name : 'ameen ansari',
 //     fname: 'akbar ansari'
-// } 
+// }
 // obj1.hallo = 'bajwa'
 // console.log(obj1);
 
@@ -13,28 +13,28 @@
 // (3)-->var obj3 = {}
 // console.log(obj3);
 
-var dataobj = {}
-// var reobj = Object.create(dataobj)
-console.log(dataobj);
-// console.log(reobj);
-var save = document.getElementById('save')
-var fInput = document.getElementById('finput')
-var sInput = document.getElementById('sinput')
-// console.log(save,input);
-save = (x,y)=> {
-    this.x = x
-    this.y = y
-    let a =  sInput.value
-    let b =  fInput.value
-    var nn = new Object(a,b)
-    // var nq = new Object(y)
-    console.log(nn);
-    // console.log(typeof nn);
-    
-    // console.log(nq);
-    // console.log(typeof nq);
+// var dataobj = {}
+var savebtn = document.getElementById('save')
+var nameInput = document.getElementById('finput')
+var fnameInput = document.getElementById('sinput')
+var para1 = document.getElementById('para1')
+var para2 = document.getElementById('para2')
+// console.log(nameInput,fnameInput,savebtn);
+makeobj = function (x, y) {
+  this.Name = x
+  this.Fname = y
 }
-var obj1 = {
-        name : 'ameen ansari',
-        fname: 'akbar ansari'
-    } 
+var u = 1
+save = () => {
+  if (nameInput.value.length > 0 && fnameInput.value.length > 0) {
+    var x = nameInput.value
+    var y = fnameInput.value
+    var obj = new makeobj(x, y)
+    console.log(obj)
+    para1.innerHTML += `${u++}:- UserName is <span><u>${obj.Name}</u></span></br>----UserF/Name is <span><u>${obj.Fname}</u></span></br></br>`
+    nameInput.value = ''
+    fnameInput.value = ''
+  } else {
+    para1.innerHTML += `Please Insert theName & Fname </br>`
+  }
+}
