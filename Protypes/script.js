@@ -32,3 +32,18 @@
 // var x = new a(3, 3)
 // console.log(x)
 // console.log(x.ans())
+
+// ----->A Simple Example Of Promise
+// var a = 60
+// let pro = () => {
+//   return new Promise((solve, reject) => {
+//     if (a > 50) {
+//       console.log('solved')
+//       solve()
+//     } else {
+//       console.log('rejected')
+//       reject()
+//     }
+//   })
+// }
+// pro().then(()=>console.log('success')).catch(()=>console.log('better luck next xyz'))
