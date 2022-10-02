@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="div1">
+      <h2 id="fheading">Add Notes Here</h2>
+      <button class="button2" id="inout">SignIn</button>
+    </div>
+    <input type="text" id="title" placeholder="Enter Title" />
+    <textarea
+      name=""
+      id="textarea1"
+      placeholder="Add Your Notes Here"
+      cols="30"
+      rows="10"
+    ></textarea>
+    <div class="div1">
+      <button id="button1">Reset</button>
+      <button class="button2">Add</button>
+    </div>
+      <form action="" id="signIn">
+          <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+        </div>
+        <div>
+            <label for="name">UserName</label>
+            <input type="text" id="name" />
+        </div>
+        <div>
+            <label for="phone">Phone #</label>
+            <input type="number" id="phone" />
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input autocomplete="false" type="password" id="password" />
+        </div>
+        <button class="button2" id="ssmit">SignUp</button>
+      </form>
+      <form action="" id="signIn1">
+          <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input autocomplete="false" type="password" id="password" />
+        </div>
+        <button class="button2" id="ssmit">SignUp</button>
+      </form>
+    <script type="module" src="./Firebase.js"></script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

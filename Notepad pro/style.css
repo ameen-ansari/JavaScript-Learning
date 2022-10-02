@@ -1,0 +1,126 @@
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+#fheading {
+  text-align: center;
+  padding: 8px;
+  background-color: rgba(31, 149, 218, 0.3);
+  border-radius: 9px;
+  width: 50%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 20px auto;
+}
+#textarea1,
+#title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 50%;
+  background-color: rgba(0, 187, 255, 0.1);
+  font-size: 1rem;
+  display: block;
+  margin: 10px auto;
+  font-weight: 500;
+  outline: 0;
+  border: 4;
+  border-width: 2px;
+  border-radius: 9px;
+}
+.div1 {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#button1,
+.button2 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  width: 145px;
+  margin: 20px auto;
+  display: block;
+  height: 30px;
+  border-radius: 4px;
+}
+
+#signIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  display: none;
+}
+
+#signIn div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40vw;
+  height: 30px;
+  margin: 4px;
+}
+
+#signIn input,label {
+  width: 70%;
+  height: 30px;
+}
+#signIn label {
+font-family:Verdana, Geneva, Tahoma, sans-serif   , serif;
+}
+@media (max-width: 800px) {
+  #signIn div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    height: 30px;
+    margin: 4px;
+  }
+  #button1,
+  #button2 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    width: 150px;
+    margin: 10px 20px;
+    display: block;
+    height: 40px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  #div1 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #fheading {
+    text-align: center;
+    padding: 8px;
+    background-color: rgba(31, 149, 218, 0.3);
+    border-radius: 9px;
+    width: 80%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px auto;
+  }
+  #textarea1,
+  #title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    background-color: rgba(0, 187, 255, 0.1);
+    font-size: 1rem;
+    display: block;
+    margin: 10px auto;
+    font-weight: 500;
+    outline: 0;
+    border: 4;
+    border-width: 2px;
+    border-radius: 9px;
+  }
+}
